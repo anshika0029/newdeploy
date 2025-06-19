@@ -13,6 +13,6 @@ area = st.number_input("Enter the area in square feet:", min_value=100, max_valu
 
 # Predict button
 if st.button("Predict Price"):
-    input_data = np.array([[area, bedrooms, bathrooms]])
+    input_data = np.array([[area]])
     prediction = model.predict(input_data)
     st.success(f"Estimated Price: ₹{prediction[0]:,.2f}")
